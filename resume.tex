@@ -1,0 +1,158 @@
+% Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+% Copyright 2014 Mark Szepieniec <http://github.com/mszep>
+% 
+% ConText style for making a resume with pandoc. Inspired by moderncv.
+% 
+% This CSS document is delivered to you under the CC BY-SA 3.0 License.
+% https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+\startmode[*mkii]
+  \enableregime[utf-8]  
+  \setupcolors[state=start]
+\stopmode
+
+\setupcolor[hex]
+\definecolor[titlegrey][h=757575]
+\definecolor[sectioncolor][h=397249]
+\definecolor[rulecolor][h=9cb770]
+
+% Enable hyperlinks
+\setupinteraction[state=start, color=sectioncolor]
+
+\setuppapersize [A4][A4]
+\setuplayout    [width=middle, height=middle,
+                 backspace=20mm, cutspace=0mm,
+                 topspace=10mm, bottomspace=20mm,
+                 header=0mm, footer=0mm]
+
+%\setuppagenumbering[location={footer,center}]
+
+\setupbodyfont[11pt, helvetica]
+
+\setupwhitespace[medium]
+
+\setupblackrules[width=31mm, color=rulecolor]
+
+\setuphead[chapter]      [style=\tfd]
+\setuphead[section]      [style=\tfd\bf, color=titlegrey, align=middle]
+\setuphead[subsection]   [style=\tfb\bf, color=sectioncolor, align=right,
+                          before={\leavevmode\blackrule\hspace}]
+\setuphead[subsubsection][style=\bf]
+
+\setuphead[chapter, section, subsection, subsubsection][number=no]
+
+%\setupdescriptions[width=10mm]
+
+\definedescription
+  [description]
+  [headstyle=bold, style=normal,
+   location=hanging, width=18mm, distance=14mm, margin=0cm]
+
+\setupitemize[autointro, packed]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
+
+\setuptables[textwidth=max, HL=none]
+
+\setupthinrules[width=15em] % width of horizontal rules
+
+\setupdelimitedtext
+  [blockquote]
+  [before={\setupalign[middle]},
+   indentnext=no,
+  ]
+
+
+\starttext
+
+\section[chinmay-pandhare]{Chinmay Pandhare}
+
+\subsection[contact-me]{Contact Me}
+
+\placetable[none]{}
+\starttable[|c|c|]
+\HL
+\NC Platform
+\NC Contact
+\NC\AR
+\HL
+\NC Email
+\NC \useURL[url1][mailto:ccpandhare@gmail.com][][ccpandhare@gmail.com]\from[url1]
+\NC\AR
+\NC LinkedIn
+\NC \useURL[url2][https://linkedin.com/in/ccpandhare][][ccpandhare]\from[url2]
+\NC\AR
+\NC WhatsApp
+\NC \useURL[url3][tel:+917718823969][][+91 7718823969]\from[url3]
+\NC\AR
+\NC Phone
+\NC \useURL[url4][tel:+919829533001][][+91 9829533001]\from[url4]
+\NC\AR
+\HL
+\stoptable
+
+\subsection[education]{Education}
+
+Birla Institute of Technology and Science, Pilani -- Pilani Campus
+
+B.E. Electrical and Electronics Engineering (Current student)
+
+Year of Graduation : 2020
+
+\subsection[bio]{Bio}
+
+I am a developer and develop in many languages including, but not
+limited to \type{JavaScript}, \type{Node.js}, \type{Python},
+\type{C/C++}. Most of my experience is in Web Development. I pick up new
+technologies with ease.
+
+\subsection[experience]{Experience}
+
+\subsubsubsection[google-summer-of-code-2017-june-2017---present]{Google
+Summer of Code 2017 (June 2017 - Present)}
+
+I am currently a GSoC student for the organization
+\useURL[url5][https://publiclab.org][][PublicLab]\from[url5]. My project
+is to create a system for image manipulation. The repository for the
+same can be found
+\useURL[url6][https://github.com/publiclab/image-sequencer][][here]\from[url6].
+The project is in \type{Node.js}.
+
+\subsubsubsection[jhunjhunu-district-court-january-2017---present]{Jhunjhunu
+District Court (January 2017 - Present)}
+
+I am working on a project for the District Court of Jhunjhunu,
+Rajasthan. This project aims at reducing corruption and the digitization
+of file copying system. It involves creating a WebApp. Upon success, the
+project will be replicated across the state of Rajasthan. The project's
+backend is written in \type{PHP}.
+
+\subsection[team-work]{Team Work}
+
+\subsubsubsection[dvm-bits-pilani-august-2016---present]{DVM BITS Pilani
+(August 2016 - Present)}
+
+I am a front-end developer at the Department of Visual Media (DVM) in
+BITS Pilani. It is responsible for developing Websites, Mobile
+Applications, Registration Software and Trailers, Teasers, Videos of the
+fests at BITS Pilani. My major contributions have been to the
+\useURL[url7][https://bits-bosm.org/2017/][][BOSM Intro
+Website]\from[url7].
+\useURL[url8][https://github.com/dvm-bitspilani][][This]\from[url8] is
+the link to the Department GitHub organization.
+
+\subsubsubsection[nss-bits-pilani-march-2017---present]{NSS, BITS Pilani
+(March 2017 - Present)}
+
+I am a Web Developer for the National Service Scheme, BITS Pilani
+Chapter.
+
+\subsubsubsection[cel-bits-pilani-august-2016---december-2016]{CEL, BITS
+Pilani (August 2016 - December 2016)}
+
+For a short period of time, i was a member of the Centre for
+Entrepreneurial leadership n BITS Pilani.
+
+\stoptext
